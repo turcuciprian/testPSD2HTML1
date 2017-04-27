@@ -16,10 +16,17 @@
                   box-shadow: 0 0 0px 0px rgba(0,0,0,1);
                   h3{
                     margin-top:4px;
-                    margin-bottom: 41px;
+                    margin-bottom: 99px;
                   }
                   hr{
                     border: 0px solid red;
+                  }
+                  form{
+                    p{
+                      &:nth-child(3) {
+                          margin-top: 31px;
+                      }
+                    }
                   }
                 }
                 button{
