@@ -3,14 +3,23 @@
 @media only screen and (max-device-width: 736px) and (orientation: portrait) {
     body {
         &.login {
+          display: block;
+          min-height: 0px;
           background-image: none;
             .container {
+              width: 100%;
                 .loginContainer {
                   width: 100%;
                   //shadow to the container
                   -webkit-box-shadow: 0 0 0px 0px rgba(0,0,0,1);
                   -moz-box-shadow: 0 0 0px 0px rgba(0,0,0,1);
                   box-shadow: 0 0 0px 0px rgba(0,0,0,1);
+                }
+                button{
+                  position:absolute;
+                  bottom:0px;
+                  left:0px;
+                  with:100%;
                 }
             }
         }
