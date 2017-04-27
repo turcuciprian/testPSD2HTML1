@@ -1,21 +1,26 @@
 body {
     text-align: center;
     font-family: Open Sans;
+
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    
     // a class that's supposed to show a background image on the body when it's set to the body
     &.login {
         background-image: url('../img/fullscreen_bg_image.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         //to align vertically
-        display: flex;
-        min-height: 100vh;
-        justify-content: center;
+
     }
     // the main container of the layout that's supposed to contain everything
     .container {
         align-self: center;
         text-align: center;
         width: 1024px;
+        //clear shadow to the container
+        @include shadow('clear');
         // the login container box that holds the login info
         .loginContainer {
             padding: 44px 51px 38px;

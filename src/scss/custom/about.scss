@@ -1,8 +1,12 @@
 body{
   background-color: #f5f8f9;
   .container{
-    //shadow to the container
-    @include shadow('clear');
+    width: 1169px;
+    .about{
+      @include shadow('');
+      min-height: 200px;
+      background: #FFF;
+    }
 
   }
 }

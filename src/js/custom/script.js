@@ -15,6 +15,7 @@ jQuery(document).ready(function($) {
           loginBtn = $('#loginBtn');
           if(loginBtn[0]){
             loginBtn.click(function(){
+              console.log(templates['about']);
               mainContainer.load(templates['about'],function(){
                 mainBody.removeClass('login');
                 console.log('about loaded');
