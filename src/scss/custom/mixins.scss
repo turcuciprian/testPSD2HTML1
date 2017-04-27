@@ -1,0 +1,17 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin shadow($status) {
+    @if $status == 'clear' {
+        -webkit-box-shadow: 0 0 0px 0px rgba(0,0,0,1);
+        -moz-box-shadow: 0 0 0px 0px rgba(0,0,0,1);
+        box-shadow: 0 0 0px 0px rgba(0,0,0,1);
+    } @else{
+      -webkit-box-shadow: 0 0 12px 2px rgba(158,158,158,1);
+      -moz-box-shadow: 0 0 12px 2px rgba(158,158,158,1);
+      box-shadow: 0 0 12px 2px rgba(158,158,158,1);
+    }
+}

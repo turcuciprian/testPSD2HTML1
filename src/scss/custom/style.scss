@@ -23,13 +23,9 @@ body {
             width: 401px;
             background-color: #FFF;
             //rounded corners:
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
+            @include border-radius(3px);
             //shadow to the container
-            -webkit-box-shadow: 0 0 12px 2px rgba(158,158,158,1);
-            -moz-box-shadow: 0 0 12px 2px rgba(158,158,158,1);
-            box-shadow: 0 0 12px 2px rgba(158,158,158,1);
+            @include shadow('');
 
             h3 {
                 font-size: 24px;
@@ -124,9 +120,7 @@ body {
             button {
                 background: #007ee5;
                 // border radius
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                border-radius: 3px;
+                @include border-radius(3px);
                 // sizes
                 width: 100%;
                 font-size: 14px;
