@@ -3,7 +3,11 @@ body{
   .container{
     width: 1169px;
     .about{
-      min-height: 200px;
+      button{
+        &.logOut{
+          float:right;
+        }
+      }
     }
 
   }
