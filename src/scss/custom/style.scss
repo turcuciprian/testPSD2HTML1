@@ -84,8 +84,10 @@ body {
                   line-height:24px;
                   &.pass{
                     display: inline-block;
-                    margin-top:50px;
                   }
+                }
+                &:nth-child(2){
+                  margin-top:50px;
                 }
               }
             }
