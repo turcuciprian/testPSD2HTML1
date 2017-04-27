@@ -1,1 +1,5 @@
-body{}
+body{
+  &.login{
+    background-image:url('../img/fullscreen_bg_image.jpg');
+  }
+}
