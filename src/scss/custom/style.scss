@@ -56,6 +56,7 @@ body {
               text-align: left;
 
               p{
+                position: relative;
                 &.finePrint{
                   text-align: center;
                   color:#a8b8c4;
@@ -67,6 +68,11 @@ body {
                     font-size: 14px;
                     font-weight: normal;
                   }
+                }
+                label{
+                  position: absolute;
+                  top:5px;
+                  left:0px;
                 }
                 input{
                   width:100%;
