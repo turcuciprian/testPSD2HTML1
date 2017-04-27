@@ -78,6 +78,7 @@ body {
                         top: 5px;
                         left: 0;
                         //transition
+                        pointer-events:none;
                         transition: 0.2s ease all;
                         -moz-transition: 0.2s ease all;
                         -webkit-transition: 0.2s ease all;
@@ -91,13 +92,18 @@ body {
                         color: #3f454a;
                         padding: 8px auto;
                         line-height: 24px;
+                        display:block;
 
-                        &.pass {
-                            display: inline-block;
+
+                        &:focus, &:valid {
+                          outline: none;
+                            & ~ label {
+                                top: -20px;
+                                color:#5264AE;
+
+                            }
                         }
-                        &:focus ~ label{
-                          top:-20px;
-                        }
+
                     }
 
                     &:nth-child(2) {
