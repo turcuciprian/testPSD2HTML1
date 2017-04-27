@@ -9,7 +9,7 @@
             .container {
               width: 100%;
                 .loginContainer {
-                  width: 100%;
+                  width: auto;
                   //shadow to the container
                   -webkit-box-shadow: 0 0 0px 0px rgba(0,0,0,1);
                   -moz-box-shadow: 0 0 0px 0px rgba(0,0,0,1);
@@ -17,9 +17,9 @@
                 }
                 button{
                   position:absolute;
-                  bottom:0px;
+                  bottom:18px; // because of padding
                   left:0px;
-                  with:100%;
+                  width:100%;
                 }
             }
         }
