@@ -1,7 +1,15 @@
 body{
+  // a class that's supposed to show a background image on the body when it's set to the body
   &.login{
     background-image:url('../img/fullscreen_bg_image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  // the main container of the layout that's supposed to contain everything
+  .container{
+    // the login container box that holds the login info
+    .loginContainer{
+      width: 503px;
+    }
   }
 }
