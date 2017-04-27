@@ -47,7 +47,7 @@ gulp.task('compressjSLib', function() {
 gulp.task('sass:watch', function() {
     gulp.watch('./src/scss/custom/*.scss', ['sass']);
     gulp.watch('./src/scss/*/*.scss', ['sass']);
-    gulp.watch('./src/javascript/lib/*.js', ['compressjSLib']);
-    gulp.watch('./src/javascript/custom/*.js', ['compressjSCustom']);
+    gulp.watch('./src/js/lib/*.js', ['compressjSLib']);
+    gulp.watch('./src/js/custom/*.js', ['compressjSCustom']);
 });
 gulp.task('default', ['sass', 'compressjSLib', 'compressjSCustom', 'sass:watch']);
