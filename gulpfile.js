@@ -24,7 +24,7 @@ gulp.task('sass', function() {
 
 //custom
 gulp.task('compressjSCustom', function() {
-    return gulp.src('./src/javascript/custom/*.js')
+    return gulp.src('./src/js/custom/*.js')
         .pipe(uglify('custom.min.js', {
             outSourceMap: true,
             mangle: false
