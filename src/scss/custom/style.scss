@@ -2,12 +2,14 @@ body {
     text-align: center;
     font-family: Open Sans;
 
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
+
 
     // a class that's supposed to show a background image on the body when it's set to the body
     &.login {
+      display: flex;
+      min-height: 100vh;
+      justify-content: center;
+      
         background-image: url('../img/fullscreen_bg_image.jpg');
         background-size: cover;
         background-repeat: no-repeat;

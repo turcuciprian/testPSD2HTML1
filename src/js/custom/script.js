@@ -1,4 +1,8 @@
 jQuery(document).ready(function($) {
+  $.ajaxSetup ({
+    // Disable caching of AJAX responses
+    cache: false
+});
     // main vars
     var templates = {
         'about': 'templates/about.html',
@@ -15,10 +19,8 @@ jQuery(document).ready(function($) {
           loginBtn = $('#loginBtn');
           if(loginBtn[0]){
             loginBtn.click(function(){
-              console.log(templates['about']);
               mainContainer.load(templates['about'],function(){
                 mainBody.removeClass('login');
-                console.log('about loaded');
               });
             });
           }
