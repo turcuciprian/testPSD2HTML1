@@ -18,9 +18,9 @@ body {
         width: 1169px;
         // the login container box that holds the login info
         .loginContainer {
-            padding: 51px 38px;
+            padding: 44px 38px;
             display: inline-block;
-            width: 503px;
+            width: 427px;
             background-color: #FFF;
             //rounded corners:
             -webkit-border-radius: 3px;
@@ -36,6 +36,7 @@ body {
                 font-family: Open Sans;
                 color: #333333;
                 font-weight: normal;
+                margin-top:2px;
             }
             hr{
               border-top: 1px solid #d0dce7;
@@ -65,7 +66,7 @@ body {
                 &.finePrint{
                   color:#a8b8c4;
                   font-size:14px;
-                  letter-spacing: 2.35px;
+                  letter-spacing: 1.3px;
                   line-height: 21px;
                   a{
                     color:#007ee5;
@@ -78,12 +79,12 @@ body {
             button{
               background: #007ee5;
               // border radius
-              -webkit-border-radius: 2px;
+              -webkit-border-radius: 1px;
               -moz-border-radius: 2px;
               border-radius: 2px;
               // sizes
               width:100%;
-              font-weight: 14px;
+              font-size: 14px;
               font-weight: bold;
               text-transform: uppercase;
               color:#FFF;
