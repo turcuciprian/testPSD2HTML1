@@ -3,9 +3,7 @@ body{
   .container{
     width: 1169px;
     .about{
-      @include shadow('');
       min-height: 200px;
-      background: #FFF;
     }
 
   }
