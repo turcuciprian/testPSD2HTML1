@@ -1,14 +1,15 @@
 /* iPhone 6+  */
 /* Portrait */
-@media only screen and (max-device-width: 736px) and (orientation: portrait) {
+@media only screen and (max-device-width: 414px) and (orientation: portrait) {
     body {
         &.login {
           display: block;
           min-height: 0px;
           background-image: none;
             .container {
-              width: 100%;
+              width: 86%;
                 .loginContainer {
+                  padding:44px 7%;
                   width: auto;
                   //shadow to the container
                   -webkit-box-shadow: 0 0 0px 0px rgba(0,0,0,1);
