@@ -74,7 +74,22 @@ body {
                   }
                 }
               }
-
+            }
+            button{
+              background: #007ee5;
+              // border radius
+              -webkit-border-radius: 2px;
+              -moz-border-radius: 2px;
+              border-radius: 2px;
+              // sizes
+              width:100%;
+              font-weight: 14px;
+              font-weight: bold;
+              text-transform: uppercase;
+              color:#FFF;
+              border:0px solid red;
+              padding:18px 0;
+              margin-top:18px;
             }
         }
     }
