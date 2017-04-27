@@ -60,7 +60,12 @@ body {
                 border-bottom: 1px solid #d0dce7;
                 font-size:16px;
                 color:#3f454a;
-                padding: 12px auto;
+                padding: 8px auto;
+                line-height:24px;
+                &.pass{
+                  display: inline-block;
+                  margin-top:50px;
+                }
               }
               p{
                 &.finePrint{
