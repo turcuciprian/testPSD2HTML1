@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglifyjs');
 //***********
 //
 // Watchable files
@@ -32,7 +33,7 @@ gulp.task('compressjSCustom', function() {
 });
 //custom
 gulp.task('compressjSLib', function() {
-    return gulp.src('./src/javascript/lib/*.js')
+    return gulp.src('./src/js/lib/*.js')
         .pipe(uglify('lib.min.js', {
             outSourceMap: true,
             mangle: false
