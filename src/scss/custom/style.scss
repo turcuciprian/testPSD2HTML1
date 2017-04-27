@@ -12,7 +12,7 @@ body {
     }
     // the main container of the layout that's supposed to contain everything
     .container {
-      align-self: center;
+        align-self: center;
         text-align: center;
         width: 1169px;
         // the login container box that holds the login info
@@ -20,6 +20,10 @@ body {
             display: inline-block;
             width: 503px;
             background-color: #FFF;
+            //rounded corners:
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
         }
     }
 }
