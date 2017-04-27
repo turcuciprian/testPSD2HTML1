@@ -3,11 +3,29 @@ body{
   .container{
     width: 1169px;
     .about{
-      button{
-        &.logOut{
-          float:right;
+      .header{
+        padding:22px;
+        background: #FFF;
+        margin-top:71px;
+        button{
+          &.logOut{
+            float:right;
+            background:#FFF;
+            border:1px solid #007ee5;
+            @include border-radius(3px);
+            text-transform: uppercase;
+            color:#007ee5;
+            font-weight: bold;
+            padding:10px 20px;
+            font-size: 12px;
+
+          }
+        }
+        .cover{
+          text-align: center;
         }
       }
+
     }
 
   }
