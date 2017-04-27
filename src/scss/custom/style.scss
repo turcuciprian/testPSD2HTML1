@@ -60,6 +60,19 @@ body {
                 color:#3f454a;
                 padding: 12px;
               }
+              p{
+                &.finePrint{
+                  color:#a8b8c4;
+                  font-size:14px;
+                  letter-spacing: 2.5px;
+                  line-height: 21px;
+                  a{
+                    color:#007ee5;
+                    font-size: 14px;
+                    font-weight: normal;
+                  }
+                }
+              }
 
             }
         }
