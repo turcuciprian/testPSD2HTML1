@@ -1,5 +1,7 @@
 body{
   &.login{
     background-image:url('../img/fullscreen_bg_image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
