@@ -54,19 +54,7 @@ body {
             form{
               display: block;
               text-align: left;
-              input{
-                width:100%;
-                border:0px solid red;
-                border-bottom: 1px solid #d0dce7;
-                font-size:16px;
-                color:#3f454a;
-                padding: 8px auto;
-                line-height:24px;
-                &.pass{
-                  display: inline-block;
-                  margin-top:50px;
-                }
-              }
+
               p{
                 &.finePrint{
                   text-align: center;
@@ -78,6 +66,19 @@ body {
                     color:#007ee5;
                     font-size: 14px;
                     font-weight: normal;
+                  }
+                }
+                input{
+                  width:100%;
+                  border:0px solid red;
+                  border-bottom: 1px solid #d0dce7;
+                  font-size:16px;
+                  color:#3f454a;
+                  padding: 8px auto;
+                  line-height:24px;
+                  &.pass{
+                    display: inline-block;
+                    margin-top:50px;
                   }
                 }
               }
