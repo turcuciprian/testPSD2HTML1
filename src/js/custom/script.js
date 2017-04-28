@@ -52,10 +52,9 @@ jQuery(document).ready(function($) {
               }
               //logout button
               if (logOut[0]) {
-                console.log('yep!');
                   logOut.click(function() {
-                      $(location).attr('host');
                       path = templates['login'];
+                      $(location).attr('hash', '');
                       reloadFunc();
 
 
