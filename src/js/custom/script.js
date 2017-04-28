@@ -101,6 +101,7 @@ jQuery(document).ready(function($) {
         }
 
         function generateProfile() {
+          var tooltip = $('.tooltip');
             var profileObj = $('.baseContent ul');
             var profileCntObj;
             if (profileObj[0]) {
@@ -113,8 +114,21 @@ jQuery(document).ready(function($) {
                     tempObj.find('i').not('a i').addClass(value['icon']); //setting the icon
 
                     profileObj.append('<li>' + tempObj.html() + '</li>');
-
                 });
+
+                //tooltip appear for when item is clicked
+                var clickableItem = $('.baseContent ul li a');
+                if(clickableItem[0]){
+                  clickableItem.on('click',function(){
+                    var thisOffset = $(this).offset();
+                    var xTop = thisOffset.top;
+                    var xLeft = thisOffset.left;
+                    console.log(xTop);
+                    tooltip.css('top',xTop);
+                    tooltip.css('left',xLeft+'50'+'px');
+
+                  });
+                }
             }
 
         }
