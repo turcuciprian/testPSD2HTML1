@@ -4,14 +4,14 @@
     -ms-border-radius: $radius;
     border-radius: $radius;
 }
-@mixin shadow($status,$size: 2px) {
+@mixin shadow($status,$spread: 2px,$blur: 12px) {
     @if $status == 'clear' {
         -webkit-box-shadow: 0 0 0px 0px rgba(0,0,0,1);
         -moz-box-shadow: 0 0 0px 0px rgba(0,0,0,1);
         box-shadow: 0 0 0px 0px rgba(0,0,0,1);
     } @else{
-      -webkit-box-shadow: 0 0 12px $size rgba(158,158,158,1);
-      -moz-box-shadow: 0 0 12px $size rgba(158,158,158,1);
-      box-shadow: 0 0 12px $size rgba(158,158,158,1);
+      -webkit-box-shadow: 0 0 $blur $spread rgba(158,158,158,1);
+      -moz-box-shadow: 0 0 $blur $spread rgba(158,158,158,1);
+      box-shadow: 0 0 $blur $spread rgba(158,158,158,1);
     }
 }

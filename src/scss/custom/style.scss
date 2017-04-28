@@ -12,10 +12,10 @@ body {
         // the login container box that holds the login info
         //header general container
         .header {
-            @include shadow( '',0px);
+            @include shadow( 'clear');
             padding: 22px 22px 0px 22px;
             background: #FFF;
-            margin-top: 71px;
+            margin-top: 64px;
             float: left;
             width: 100%;
 
@@ -79,7 +79,7 @@ body {
                         width: 171px;
                         height: 171px;
                         margin-top: -11px;
-                        @include shadow( '',0);
+                        @include shadow( '',0px,6px);
                         position: relative;
                     }
                 }
@@ -134,7 +134,7 @@ body {
                 margin: 0;
                 padding: 0;
                 text-align: left;
-                @include shadow( '');
+                @include shadow( '',0px,6px);
                 padding-right: 44px;
                 margin:-36px 0px 0px -22px;
                 ul {
@@ -160,7 +160,7 @@ body {
 
                 .followers {
                     float: right;
-                    margin-top: 18px;
+                    margin-top: 17px;
                     color:#a6b0b7;
                     span{
                       color:#3f454a;
