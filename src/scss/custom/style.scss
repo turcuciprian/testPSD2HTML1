@@ -13,7 +13,7 @@ body {
         //header general container
         .header {
             @include shadow( '',0px);
-            padding: 22px;
+            padding: 22px 22px 0px 22px;
             background: #FFF;
             margin-top: 71px;
             float: left;
@@ -125,12 +125,18 @@ body {
             }
 
             .menu {
+
                 display: inline-block;
                 width: 100%;
+                float:left;
                 margin: 0;
                 padding: 0;
-
+                text-align: left;
+                @include shadow( '');
+                padding-right: 44px;
+                margin:-36px 0px 0px -22px;
                 ul {
+                  margin-left: 171px;
                     display: inline-block;
 
                     li {
