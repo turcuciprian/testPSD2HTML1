@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
     profileInfo = [{
             'value': 'John Doe',
             'type': 'Name',
-            'icon': 'ion-android-create',
+            'icon': '',
         },
         {
             'value': 'www.seller.com',
@@ -110,7 +110,8 @@ jQuery(document).ready(function($) {
                     var tempObj = profileCntObj;
                     profileObj.append('<li>' + tempObj.html() + '</li>');
 
-                    tempObj.find('span').html(value['value']);
+                    tempObj.find('span').html(value['value']); //Adding the content Title
+                    tempObj.find('i').not('a i').addClass(value['icon']); //setting the icon
 
                 });
             }
