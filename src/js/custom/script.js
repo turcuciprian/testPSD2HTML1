@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
     profileInfo = [{
             'value': 'John Doe',
             'type': 'Name',
-            'icon': '',
+            'icon': 'ion-android-create',
         },
         {
             'value': 'www.seller.com',
@@ -99,7 +99,21 @@ jQuery(document).ready(function($) {
                 //logout button
             });
         }
-        function generateProfile(){
+
+        function generateProfile() {
+            var profileObj = $('.baseContent ul');
+            var profileCntObj;
+            if (profileObj[0]) {
+                profileCntObj = $(profileObj.html()); //create a object from the basecontent contents html
+                profileObj.html(''); //clear contents of profileObj
+                $.each(profileInfo, function(index, value) {
+                    var tempObj = profileCntObj;
+                    profileObj.append('<li>' + tempObj.html() + '</li>');
+
+                    tempObj.find('span').html(value['value']);
+
+                });
+            }
 
         }
         //first initialization
