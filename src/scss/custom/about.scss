@@ -12,10 +12,11 @@ body {
                 padding: 22px 22px 0;
                 float: left;
                 width: 100%;
-                min-height: 100px;
+                min-height: 616px;
                 @include shadow( '',0px,6px);
                 background: #FFF;
                 margin-top: 37px;
+                margin-bottom: 264px;
 
                 h3 {
                     color: #727e88;
@@ -26,9 +27,30 @@ body {
                   margin:0px;
                   padding:0px;
                   li{
+                    padding:11px 0px 11px 0;
+                    display: table;
                     margin:0px;
-                    padding:0px;
                     list-style-type: none;
+                    background-color:#f5f8f8;
+                    span{
+
+                    }
+                    i{
+                      color:#a8b8c4;
+                      margin-right: 10px;
+                    }
+                    a{
+                      margin-left:24px;
+                      background: #ecf1f5;
+                      padding: 10px 11px;
+                      i{
+                        color:#727e88;
+                        margin-right: 0px;
+                        display: inline-block;
+
+                      }
+                    }
+
                   }
                 }
             }
