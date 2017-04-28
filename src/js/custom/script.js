@@ -37,7 +37,9 @@ jQuery(document).ready(function($) {
     var globalHeader = $('.header');
     var mainBody = $('body');
 
+
     if (mainContainer[0]) {
+
         //event for when the hash of the url changes
         $(window).on("hashchange", hashChanged);
 
@@ -101,7 +103,6 @@ jQuery(document).ready(function($) {
         }
 
         function generateProfile() {
-          var tooltip = $('.tooltip');
             var profileObj = $('.baseContent ul');
             var profileCntObj;
             if (profileObj[0]) {
@@ -115,22 +116,30 @@ jQuery(document).ready(function($) {
 
                     profileObj.append('<li>' + tempObj.html() + '</li>');
                 });
+                tooltipFunc();
+            }
 
-                //tooltip appear for when item is clicked
-                var clickableItem = $('.baseContent ul li a');
-                if(clickableItem[0]){
-                  clickableItem.on('click',function(){
+        }
+
+        function tooltipFunc() {
+          var tooltip = $('.tooltip');
+            //tooltip appear for when item is clicked
+            var clickableItem = $('.baseContent ul li a');
+            if (clickableItem[0]) {
+                clickableItem.on('click', function(event) {
+                  event.stopPropagation();
+                  tooltip.addClass('show');
                     var thisOffset = $(this).offset();
                     var xTop = thisOffset.top;
                     var xLeft = thisOffset.left;
-                    console.log(xTop);
-                    tooltip.css('top',xTop);
-                    tooltip.css('left',xLeft+'50'+'px');
+                    tooltip.css('top', xTop - 10);
+                    tooltip.css('left', xLeft + 'px');
 
-                  });
-                }
+                });
             }
-
+            mainBody.on('click',function(){
+              tooltip.removeClass('show');
+            });
         }
         //first initialization
         reloadFunc();
