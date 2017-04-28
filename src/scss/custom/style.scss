@@ -53,8 +53,12 @@ body {
                 }
             }
             .profInfo{
+              div{
+                display: inline-block;
+                vertical-align: top;
+              }
               .left{
-                float:left;
+                width:33%;
                 img{
                   object-fit: cover;
                   width: 171px;
@@ -62,9 +66,14 @@ body {
                 }
               }
               .center{
+                width:33%;
                 text-align: left;
+                span{
+                  display: block;
+                }
               }
               .right{
+                width:33%;
                 float:right;
               }
             }
