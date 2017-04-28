@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
             'type': 'City, state & Zip',
             'icon': 'ion-ios-home-outline',
         },
-    }
+    ];
 
     // main vars
     var templates = {
@@ -78,8 +78,9 @@ jQuery(document).ready(function($) {
                             ulMenu.find('li a').removeClass('selected');
                             switch (hash) {
                                 case '#about':
-                                    console.log('yep');
                                     ulMenu.find('.about a').addClass('selected');
+                                    // generate the data for the profile
+                                    generateProfile();
                                     break;
                                 case '#settings':
                                     ulMenu.find('li.settings a').addClass('selected');
@@ -97,6 +98,9 @@ jQuery(document).ready(function($) {
 
                 //logout button
             });
+        }
+        function generateProfile(){
+
         }
         //first initialization
         reloadFunc();

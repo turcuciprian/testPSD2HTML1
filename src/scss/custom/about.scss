@@ -22,6 +22,15 @@ body {
                     font-size: 24px;
                     font-weight: 200;
                 }
+                ul{
+                  margin:0px;
+                  padding:0px;
+                  li{
+                    margin:0px;
+                    padding:0px;
+                    list-style-type: none;
+                  }
+                }
             }
         }
     }
