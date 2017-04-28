@@ -10,32 +10,14 @@
             .container {
               width: 86%;
               margin:auto;
-                .loginContainer {
-                  padding:44px 7%;
-                  width: auto;
-                  //shadow to the container
-                  @include shadow('clear');
-
-                  h3{
-                    margin-top:4px;
-                    margin-bottom: 99px;
+              @import 'mobile_login';
+                a{
+                  &#loginBtn{
+                    position:absolute;
+                    bottom:0px;
+                    left:0px;
+                    width:100%;
                   }
-                  hr{
-                    border: 0px solid red;
-                  }
-                  form{
-                    p{
-                      &:nth-child(3) {
-                          margin-top: 31px;
-                      }
-                    }
-                  }
-                }
-                button{
-                  position:absolute;
-                  bottom:0px;
-                  left:0px;
-                  width:100%;
                 }
             }
         }
