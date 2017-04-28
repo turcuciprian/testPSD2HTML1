@@ -94,9 +94,17 @@ body {
                 }
               }
               .right{
+                color:#727e88;
                 float:right;
                 max-width: 248px;
                 width:100%;
+                span{
+                  font-size: 12px;
+                  word-spacing: 14px;
+                }
+                i{
+                  margin-right: 3px;
+                }
               }
             }
             .menu{
