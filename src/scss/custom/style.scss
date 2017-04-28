@@ -2,7 +2,6 @@ body {
     text-align: center;
     font-family: Open Sans;
     // a class that's supposed to show a background image on the body when it's set to the body
-
     // the main container of the layout that's supposed to contain everything
     .container {
         align-self: center;
@@ -11,108 +10,139 @@ body {
         width: 100%;
         margin: auto;
         // the login container box that holds the login info
-
         //header general container
         .header {
             @include shadow( '',0px);
             padding: 22px;
             background: #FFF;
             margin-top: 71px;
-            .logInOut{
-              text-align: right;
-              a {
-                  &.logOut {
-                      background: #FFF;
-                      border: 1px solid #007ee5;
-                      @include border-radius(3px);
-                      text-transform: uppercase;
-                      color: #007ee5;
-                      font-weight: bold;
-                      padding: 10px 20px;
-                      font-size: 12px;
-                  }
-              }
-            }
-            .cover {
-              padding:22px 0 0 0;
-                text-align: center;
-                button{
-                  display: inline-block;
-                  text-transform: capitalize;
-                  font-size:15px;
-                  font-weight: 200;
-                  padding:16px 18px 8px 18px;
-                  border:1px solid #d0dce7;
-                  background: #FFF;
-                  color:#787e88;
-                  i{
-                    font-size: 32px;
-                    margin-right: 18px;
-                    opacity: .5;
-                    float:left;
-                    margin-top: -10px;
-                  }
-                }
-            }
-            .profInfo{
-              float:left;
-              width:100%;
-              div{
-                float:left;
-                display: inline-block;
-                vertical-align: top;
-              }
-              .left{
-                width:171px;
-                margin-right: 26px;
-                img{
-                  object-fit: cover;
-                  width: 171px;
-                  height: 171px;
-                  margin-top: -11px;
-                }
-              }
-              .center{
-                max-width: 500px;
-                width:100%;
-                text-align: left;
-                span{
-                  font-size: 14px;
-                  display: block;
-                  margin-bottom: 3px;
-                  i{
-                    color:#3f454a;
-                    margin-right: 15px;
-                  }
-                }
-                h4{
-                  color:#3f454a;
-                  font-size: 19px;
-                  font-weight: 600;
-                  margin-top: 22px;
-                  margin-bottom: 10px;
-                }
-              }
-              .right{
-                color:#727e88;
-                float:right;
-                max-width: 248px;
-                width:100%;
-                span{
-                  font-size: 12px;
-                  word-spacing: 14px;
-                }
-                i{
-                  margin-right: 3px;
-                }
-              }
-            }
-            .menu{
-              float:left;
-              width: 100%;
-            }
             float: left;
             width: 100%;
+
+            .logInOut {
+                text-align: right;
+
+                a {
+                    &.logOut {
+                        background: #FFF;
+                        border: 1px solid #007ee5;
+                        @include border-radius(3px);
+                        text-transform: uppercase;
+                        color: #007ee5;
+                        font-weight: bold;
+                        padding: 10px 20px;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .cover {
+                padding: 22px 0 0;
+                text-align: center;
+
+                button {
+                    display: inline-block;
+                    text-transform: capitalize;
+                    font-size: 15px;
+                    font-weight: 200;
+                    padding: 16px 18px 8px;
+                    border: 1px solid #d0dce7;
+                    background: #FFF;
+                    color: #787e88;
+
+                    i {
+                        font-size: 32px;
+                        margin-right: 18px;
+                        opacity: 0.5;
+                        float: left;
+                        margin-top: -10px;
+                    }
+                }
+            }
+
+            .profInfo {
+                float: left;
+                width: 100%;
+
+                div {
+                    float: left;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                .left {
+                    width: 171px;
+                    margin-right: 26px;
+
+                    img {
+                        object-fit: cover;
+                        width: 171px;
+                        height: 171px;
+                        margin-top: -11px;
+                    }
+                }
+
+                .center {
+                    max-width: 500px;
+                    width: 100%;
+                    text-align: left;
+
+                    span {
+                        font-size: 14px;
+                        display: block;
+                        margin-bottom: 3px;
+
+                        i {
+                            color: #3f454a;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    h4 {
+                        color: #3f454a;
+                        font-size: 19px;
+                        font-weight: 600;
+                        margin-top: 22px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .right {
+                    color: #727e88;
+                    float: right;
+                    max-width: 248px;
+                    width: 100%;
+
+                    span {
+                        font-size: 12px;
+                        word-spacing: 14px;
+                    }
+
+                    i {
+                        margin-right: 3px;
+                    }
+                }
+            }
+
+            .menu {
+                display: inline-block;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+
+                ul {
+                    display: inline-block;
+
+                    li {
+                        list-style-type: none;
+                        display: inline-block;
+                    }
+                }
+
+                .followers {
+                    float: right;
+                }
+            }
         }
     }
 }
