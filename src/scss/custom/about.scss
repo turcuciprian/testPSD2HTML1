@@ -71,12 +71,11 @@ body {
         }
 
         .tooltip {
-          position: absolute;
-          @include shadow( '',0px,6px);
-          background-color:#FFF;
-          width: 298px;
-          height: 142px;
-
+            position: absolute;
+            @include shadow( '',0px,6px);
+            background-color: #FFF;
+            width: 298px;
+            height: 142px;
             &:before {
                 content: "";
                 position: absolute;
@@ -85,7 +84,7 @@ body {
                 margin-left: -10px;
                 border-width: 10px;
                 border-style: solid;
-                border-color: transparent #FFF transparent transparent;
+                border-color: transparent #e3e3e3 transparent transparent;
             }
         }
     }
