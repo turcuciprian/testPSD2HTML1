@@ -33,14 +33,27 @@ jQuery(document).ready(function($) {
 
         mainContainer.load(path, function() {
             loginBtn = $('#loginBtn');
+            var logOut = $('button.logOut');
             if (loginBtn[0]) {
                 loginBtn.click(function() {
+                  logOut = $('button.logOut');
                     path = templates['about'];
                     $(location).attr('hash', '#about');
                     mainContainer.load(path, function() {
                         mainBody.removeClass('login');
                     });
                 });
+            }
+            //logout button
+            if(logOut[0]){
+              logOut.click(function(){
+                $(location).attr('hash','');
+                path = templates['login'];
+                mainContainer.load(path);
+                mainBody.addClass('login');
+
+
+              });
             }
         });
         //add the login class to the body to style the login page
