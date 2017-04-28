@@ -3,8 +3,7 @@ jQuery(document).ready(function($) {
         // Disable caching of AJAX responses
         cache: false
     });
-    var hash = $(location).attr('hash');
-    var path;
+    var hash, path,logOut;
 
     // main vars
     var templates = {
@@ -18,44 +17,55 @@ jQuery(document).ready(function($) {
 
     if (mainContainer[0]) {
         // custom made basic routing
-        switch (hash) {
-            case '#about':
-                path = templates['about'];
-                break;
-            case '#settings':
-                path = templates['settings'];
-                break;
-            default:
-                path = templates['login'];
+
+
+        function reloadFunc() {
+          //getting the url hash
+          hash = $(location).attr('hash');
+          //checking the hash value and acting on it
+          switch (hash) {
+              case '#about':
+                  path = templates['about'];
+                  break;
+              case '#settings':
+                  path = templates['settings'];
+                  break;
+              default:
+                  path = templates['login'];
+                  mainBody.addClass('login');
+                  break;
+          }
+
+          mainContainer.load(path, function() {
+              loginBtn = $('#loginBtn');
+              logOut = $('button.logOut');
+              if (loginBtn[0]) {
                 mainBody.addClass('login');
-                break;
+                  loginBtn.click(function() {
+                      logOut = $('button.logOut');
+                      path = templates['about'];
+                      $(location).attr('hash', '#about');
+                      mainContainer.load(path, function() {
+                          mainBody.removeClass('login');
+                      });
+                  });
+              }
+              //logout button
+              if (logOut[0]) {
+                console.log('yep!');
+                  logOut.click(function() {
+                      $(location).attr('host');
+                      path = templates['login'];
+                      reloadFunc();
+
+
+                  });
+              }
+          });
         }
+        //first initialization
+        reloadFunc();
 
-        mainContainer.load(path, function() {
-            loginBtn = $('#loginBtn');
-            var logOut = $('button.logOut');
-            if (loginBtn[0]) {
-                loginBtn.click(function() {
-                  logOut = $('button.logOut');
-                    path = templates['about'];
-                    $(location).attr('hash', '#about');
-                    mainContainer.load(path, function() {
-                        mainBody.removeClass('login');
-                    });
-                });
-            }
-            //logout button
-            if(logOut[0]){
-              logOut.click(function(){
-                $(location).attr('hash','');
-                path = templates['login'];
-                mainContainer.load(path);
-                mainBody.addClass('login');
-
-
-              });
-            }
-        });
         //add the login class to the body to style the login page
     }
 });
