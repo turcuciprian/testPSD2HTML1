@@ -12,34 +12,32 @@ jQuery(document).ready(function($) {
         'settings': 'templates/settings.html',
         'login': 'templates/login.html'
     }
-
-
-    console.log(hash);
-
     // obj vars
     var mainContainer = $('.container');
     var mainBody = $('body');
 
     if (mainContainer[0]) {
-      // custom made basic routing
-      switch (hash) {
-          case '#about':
-              path = templates['about'];
-              break;
-          case '#settings':
-              path = templates['settings'];
-              break;
-          default:
-              path = templates['login'];
-              mainBody.addClass('login');
-              break;
-      }
+        // custom made basic routing
+        switch (hash) {
+            case '#about':
+                path = templates['about'];
+                break;
+            case '#settings':
+                path = templates['settings'];
+                break;
+            default:
+                path = templates['login'];
+                mainBody.addClass('login');
+                break;
+        }
 
         mainContainer.load(path, function() {
             loginBtn = $('#loginBtn');
             if (loginBtn[0]) {
                 loginBtn.click(function() {
-                    mainContainer.load(templates['about'], function() {
+                    path = templates['about'];
+                    $(location).attr('hash', '#about');
+                    mainContainer.load(path, function() {
                         mainBody.removeClass('login');
                     });
                 });
