@@ -51,11 +51,29 @@ jQuery(document).ready(function($) {
                 //load just the header
                 globalHeader = $('.header');
                 if (globalHeader[0]) {
-                    globalHeader.load('templates/header.html');
+                    globalHeader.load('templates/header.html', function() {
+                        var ulMenu = $('.menu ul');
+                        if (ulMenu[0]) {
+                            ulMenu.find('li a').removeClass('selected');
+                            switch (hash) {
+                                case '#about':
+                                    console.log('yep');
+                                    ulMenu.find('.about a').addClass('selected');
+                                    break;
+                                case '#settings':
+                                    ulMenu.find('li.settings a').addClass('selected');
+                                    break;
+                                case '#':
+                                default:
+                                    break;
+                            }
+                        }
+                    });
                 }
 
                 loginBtn = $('#loginBtn');
                 logOut = $('button.logOut');
+
                 //logout button
             });
         }
