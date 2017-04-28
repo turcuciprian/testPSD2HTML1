@@ -52,6 +52,22 @@ body {
                   }
                 }
             }
+            .profInfo{
+              .left{
+                float:left;
+                img{
+                  object-fit: cover;
+                  max-width: 172px;
+                  height: 171px;
+                }
+              }
+              .center{
+
+              }
+              .right{
+                float:right;
+              }
+            }
         }
     }
 }
