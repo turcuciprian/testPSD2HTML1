@@ -1,11 +1,128 @@
-body{
-  &.login {
-      display: flex;
-      min-height: 100vh;
-      justify-content: center;
-      background-image: url('../img/fullscreen_bg_image.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      //to align vertically
-  }
+body {
+    &.login {
+        display: flex;
+        min-height: 100vh;
+        justify-content: center;
+        background-image: url('../img/fullscreen_bg_image.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        //to align vertically
+        .container {
+            .loginContainer {
+                padding: 44px 51px 38px;
+                display: inline-block;
+                width: 401px;
+                background-color: #FFF;
+                //rounded corners:
+                @include border-radius(3px);
+                //shadow to the container
+                @include shadow( '');
+
+                h3 {
+                    font-size: 24px;
+                    font-family: Open Sans;
+                    color: #333333;
+                    font-weight: normal;
+                    margin-top: 2px;
+                    margin-bottom: 31px;
+                }
+
+                hr {
+                    border: 1px solid #d0dce7;
+                    border-bottom:: 0 solid #d0dce7;
+                    margin-bottom: 64px;
+                }
+
+                label {
+                    font-family: Open Sans;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-weight: 200;
+                    color: #a6b0b7;
+                    display: block;
+                }
+
+                form {
+                    display: block;
+                    text-align: left;
+
+                    p {
+                        position: relative;
+
+                        &.finePrint {
+                            text-align: center;
+                            color: #a8b8c4;
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            line-height: 21px;
+
+                            a {
+                                color: #007ee5;
+                                font-size: 14px;
+                                font-weight: normal;
+                            }
+                        }
+
+                        label {
+                            position: absolute;
+                            top: 5px;
+                            left: 0;
+                            color: #3f454a;
+                            font-size: 14px;
+                            //transition
+                            pointer-events: none;
+                            transition: 0.2s ease all;
+                            -moz-transition: 0.2s ease all;
+                            -webkit-transition: 0.2s ease all;
+                        }
+
+                        input {
+                            width: 100%;
+                            border: 0 solid red;
+                            border-bottom: 1px solid #d0dce7;
+                            font-size: 16px;
+                            color: #3f454a;
+                            padding: 8px auto;
+                            line-height: 24px;
+                            display: block;
+
+                            &:focus,
+                            &:valid {
+                                outline: none;
+
+                                & ~ label {
+                                    top: -20px;
+                                    font-size: 12px;
+                                    color: #a6b0b7;
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            margin-top: 56px;
+                        }
+
+                        &:nth-child(3) {
+                            margin-top: 28px;
+                        }
+                    }
+                }
+
+                button {
+                    background: #007ee5;
+                    // border radius
+                    @include border-radius(3px);
+                    // sizes
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: #FFF;
+                    border: 0 solid red;
+                    padding: 18px 0;
+                    margin-top: 18px;
+                }
+            }
+        }
+    }
 }
