@@ -1,0 +1,11 @@
+body{
+  &.login {
+      display: flex;
+      min-height: 100vh;
+      justify-content: center;
+      background-image: url('../img/fullscreen_bg_image.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      //to align vertically
+  }
+}
