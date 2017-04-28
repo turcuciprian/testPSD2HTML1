@@ -35,7 +35,9 @@ body {
                         list-style-type: none;
                         background-color: #f5f8f8;
 
-                        span {}
+                        span {
+                            //empty
+                        }
 
                         i {
                             color: #a8b8c4;
@@ -46,7 +48,7 @@ body {
                         a {
                             margin-left: 24px;
                             background: #ecf1f5;
-                            padding: 10px 11px;
+                            padding: 16px 11px 11px;
 
                             i {
                                 color: #727e88;
