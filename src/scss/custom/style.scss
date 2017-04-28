@@ -55,12 +55,16 @@ body {
                 }
             }
             .profInfo{
+              float:left;
+              width:100%;
               div{
+                float:left;
                 display: inline-block;
                 vertical-align: top;
               }
               .left{
-                width:33%;
+                width:171px;
+                margin-right: 26px;
                 img{
                   object-fit: cover;
                   width: 171px;
@@ -69,17 +73,25 @@ body {
                 }
               }
               .center{
-                width:33%;
+                max-width: 500px;
+                width:100%;
                 text-align: left;
                 span{
                   display: block;
                 }
               }
               .right{
-                width:33%;
                 float:right;
+                max-width: 248px;
+                width:100%;
               }
             }
+            .menu{
+              float:left;
+              width: 100%;
+            }
+            float: left;
+            width: 100%;
         }
     }
 }
