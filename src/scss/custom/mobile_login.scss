@@ -1,0 +1,23 @@
+.loginContainer {
+    padding: 44px 7%;
+    width: auto;
+    //shadow to the container
+    @include shadow( 'clear');
+
+    h3 {
+        margin-top: 4px;
+        margin-bottom: 99px;
+    }
+
+    hr {
+        border: 0 solid red;
+    }
+
+    form {
+        p {
+            &:nth-child(3) {
+                margin-top: 31px;
+            }
+        }
+    }
+}
