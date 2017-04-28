@@ -13,17 +13,21 @@ jQuery(document).ready(function($) {
     }
     // obj vars
     var mainContainer = $('.container');
+    var globalHeader = $('.header');
     var mainBody = $('body');
 
     if (mainContainer[0]) {
-      //event for when the hash of the url changes
-        $(window).on("hashchange",hashChanged);
-        function hashChanged(){
-          reloadFunc();
+        //event for when the hash of the url changes
+        $(window).on("hashchange", hashChanged);
+
+        function hashChanged() {
+            reloadFunc();
         }
 
 
+
         function reloadFunc() {
+
             //getting the url hash
             hash = $(location).attr('hash');
             //checking the hash value and acting on it
@@ -44,6 +48,12 @@ jQuery(document).ready(function($) {
             }
 
             mainContainer.load(path, function() {
+                //load just the header
+                globalHeader = $('.header');
+                if (globalHeader[0]) {
+                    globalHeader.load('templates/header.html');
+                }
+
                 loginBtn = $('#loginBtn');
                 logOut = $('button.logOut');
                 //logout button
