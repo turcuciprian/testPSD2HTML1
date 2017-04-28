@@ -1,20 +1,15 @@
 body {
     text-align: center;
     font-family: Open Sans;
-
-
-
     // a class that's supposed to show a background image on the body when it's set to the body
     &.login {
-      display: flex;
-      min-height: 100vh;
-      justify-content: center;
-      
+        display: flex;
+        min-height: 100vh;
+        justify-content: center;
         background-image: url('../img/fullscreen_bg_image.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         //to align vertically
-
     }
     // the main container of the layout that's supposed to contain everything
     .container {
@@ -30,7 +25,7 @@ body {
             //rounded corners:
             @include border-radius(3px);
             //shadow to the container
-            @include shadow('');
+            @include shadow( '');
 
             h3 {
                 font-size: 24px;
@@ -135,6 +130,31 @@ body {
                 border: 0 solid red;
                 padding: 18px 0;
                 margin-top: 18px;
+            }
+        }
+        //header general container
+        .header {
+            @include shadow( '',0px);
+            padding: 22px;
+            background: #FFF;
+            margin-top: 71px;
+
+            button {
+                &.logOut {
+                    float: right;
+                    background: #FFF;
+                    border: 1px solid #007ee5;
+                    @include border-radius(3px);
+                    text-transform: uppercase;
+                    color: #007ee5;
+                    font-weight: bold;
+                    padding: 10px 20px;
+                    font-size: 12px;
+                }
+            }
+
+            .cover {
+                text-align: center;
             }
         }
     }

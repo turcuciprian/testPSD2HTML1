@@ -1,33 +1,9 @@
-body{
-  background-color: #f5f8f9;
-  .container{
-    width: 1169px;
-    .about{
-      .header{
-        @include shadow('',0px);
-        padding:22px;
-        background: #FFF;
-        margin-top:71px;
-        button{
-          &.logOut{
-            float:right;
-            background:#FFF;
-            border:1px solid #007ee5;
-            @include border-radius(3px);
-            text-transform: uppercase;
-            color:#007ee5;
-            font-weight: bold;
-            padding:10px 20px;
-            font-size: 12px;
+body {
+    background-color: #f5f8f9;
 
-          }
-        }
-        .cover{
-          text-align: center;
-        }
-      }
+    .container {
+        width: 1169px;
 
+        .about {}
     }
-
-  }
 }
