@@ -23,6 +23,7 @@ jQuery(document).ready(function($) {
             //getting the url hash
             hash = $(location).attr('hash');
             //checking the hash value and acting on it
+            mainBody.removeClass('login');
             switch (hash) {
                 case '#about':
                     path = templates['about'];
@@ -33,8 +34,10 @@ jQuery(document).ready(function($) {
                 case '#':
                 default:
                     path = templates['login'];
+                    mainBody.addClass('login');
                     break;
             }
+
             mainContainer.load(path, function() {
                 loginBtn = $('#loginBtn');
                 logOut = $('button.logOut');
