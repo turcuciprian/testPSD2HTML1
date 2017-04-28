@@ -3,26 +3,27 @@ body {
 
     .container {
         max-width: 1169px;
-
+        .baseContent{
+          text-align: left;
+          padding: 22px 22px 0;
+          float: left;
+          width: 100%;
+          min-height: 616px;
+          @include shadow( '',0px,6px);
+          background: #FFF;
+          margin-top: 37px;
+          margin-bottom: 264px;
+          h3 {
+              color: #727e88;
+              font-size: 24px;
+              font-weight: 200;
+          }
+        }
         .about {
             width: 100%;
 
             .baseContent {
-                text-align: left;
-                padding: 22px 22px 0;
-                float: left;
-                width: 100%;
-                min-height: 616px;
-                @include shadow( '',0px,6px);
-                background: #FFF;
-                margin-top: 37px;
-                margin-bottom: 264px;
 
-                h3 {
-                    color: #727e88;
-                    font-size: 24px;
-                    font-weight: 200;
-                }
 
                 ul {
                     margin: 0;
