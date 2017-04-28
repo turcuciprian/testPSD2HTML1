@@ -32,9 +32,24 @@ body {
               }
             }
             .cover {
+              padding:22px 0 0 0;
                 text-align: center;
                 button{
                   display: inline-block;
+                  text-transform: capitalize;
+                  font-size:15px;
+                  font-weight: 200;
+                  padding:16px 18px 8px 18px;
+                  border:1px solid #d0dce7;
+                  background: #FFF;
+                  color:#787e88;
+                  i{
+                    font-size: 32px;
+                    margin-right: 18px;
+                    opacity: .5;
+                    float:left;
+                    margin-top: -10px;
+                  }
                 }
             }
         }

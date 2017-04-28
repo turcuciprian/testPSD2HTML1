@@ -45,7 +45,6 @@ gulp.task('compressjSLib', function() {
 //
 
 gulp.task('sass:watch', function() {
-    gulp.watch('./src/scss/custom/*.scss', ['sass']);
     gulp.watch('./src/scss/*/*.scss', ['sass']);
     gulp.watch('./src/js/lib/*.js', ['compressjSLib']);
     gulp.watch('./src/js/custom/*.js', ['compressjSCustom']);
