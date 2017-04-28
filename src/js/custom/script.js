@@ -3,7 +3,28 @@ jQuery(document).ready(function($) {
         // Disable caching of AJAX responses
         cache: false
     });
-    var hash, path, logOut;
+    var hash, path, logOut, profileInfo;
+    profileInfo = [{
+            'value': 'John Doe',
+            'type': 'Name',
+            'icon': '',
+        },
+        {
+            'value': 'www.seller.com',
+            'type': 'Website Url',
+            'icon': 'ion-android-globe',
+        },
+        {
+            'value': '(949) 325 - 68594',
+            'type': 'Phone Number',
+            'icon': 'ion-ios-telephone-outline',
+        },
+        {
+            'value': 'NewPort Beach, CA',
+            'type': 'City, state & Zip',
+            'icon': 'ion-ios-home-outline',
+        },
+    }
 
     // main vars
     var templates = {
