@@ -79,6 +79,8 @@ body {
                         width: 171px;
                         height: 171px;
                         margin-top: -11px;
+                        @include shadow( '',0);
+                        position: relative; 
                     }
                 }
 
