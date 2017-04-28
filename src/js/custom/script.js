@@ -16,7 +16,11 @@ jQuery(document).ready(function($) {
     var mainBody = $('body');
 
     if (mainContainer[0]) {
-        // custom made basic routing
+      //event for when the hash of the url changes
+        $(window).on("hashchange",hashChanged);
+        function hashChanged(){
+          reloadFunc();
+        }
 
 
         function reloadFunc() {
@@ -24,6 +28,7 @@ jQuery(document).ready(function($) {
             hash = $(location).attr('hash');
             //checking the hash value and acting on it
             mainBody.removeClass('login');
+            // custom made basic routing
             switch (hash) {
                 case '#about':
                     path = templates['about'];
@@ -41,25 +46,7 @@ jQuery(document).ready(function($) {
             mainContainer.load(path, function() {
                 loginBtn = $('#loginBtn');
                 logOut = $('button.logOut');
-                if (loginBtn[0]) {
-                    mainBody.addClass('login');
-                    loginBtn.click(function() {
-                        path = templates['about'];
-                        $(location).attr('hash', '#about');
-                        reloadFunc();
-                    });
-                }
                 //logout button
-                if (logOut[0]) {
-                    console.log('ok');
-                    logOut.click(function() {
-                        path = templates['login'];
-                        $(location).attr('hash', '');
-                        reloadFunc();
-
-
-                    });
-                }
             });
         }
         //first initialization
