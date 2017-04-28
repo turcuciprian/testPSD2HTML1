@@ -7,7 +7,9 @@ body {
     .container {
         align-self: center;
         text-align: center;
-        width: 1024px;
+        max-width: 1024px;
+        width: 100%;
+        margin: auto;
         // the login container box that holds the login info
 
         //header general container
