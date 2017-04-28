@@ -3,28 +3,29 @@ body {
 
     .container {
         max-width: 1169px;
-        .baseContent{
-          text-align: left;
-          padding: 22px 22px 0;
-          float: left;
-          width: 100%;
-          min-height: 616px;
-          @include shadow( '',0px,6px);
-          background: #FFF;
-          margin-top: 37px;
-          margin-bottom: 264px;
-          h3 {
-              color: #727e88;
-              font-size: 24px;
-              font-weight: 200;
-          }
+
+        .baseContent {
+            text-align: left;
+            padding: 22px 22px 0;
+            float: left;
+            width: 100%;
+            min-height: 616px;
+            @include shadow( '',0px,6px);
+            background: #FFF;
+            margin-top: 37px;
+            margin-bottom: 264px;
+
+            h3 {
+                color: #727e88;
+                font-size: 24px;
+                font-weight: 200;
+            }
         }
+
         .about {
             width: 100%;
 
             .baseContent {
-
-
                 ul {
                     margin: 0;
                     padding: 0;
@@ -36,6 +37,7 @@ body {
                         list-style-type: none;
                         background-color: #f5f8f8;
                         font-size: 14px;
+
                         span {
                             //empty
                         }
@@ -58,12 +60,32 @@ body {
                                 font-size: 21px;
                             }
                         }
-                        &:nth-child(1){
-                          font-weight: bold;
-                          font-size: 16px;
+
+                        &:nth-child(1) {
+                            font-weight: bold;
+                            font-size: 16px;
                         }
                     }
                 }
+            }
+        }
+
+        .tooltip {
+          position: absolute;
+          @include shadow( '',0px,6px);
+          background-color:#FFF;
+          width: 298px;
+          height: 142px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 17px;
+                left: -10px;
+                margin-left: -10px;
+                border-width: 10px;
+                border-style: solid;
+                border-color: transparent #FFF transparent transparent;
             }
         }
     }
