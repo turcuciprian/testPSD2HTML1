@@ -80,7 +80,7 @@ body {
                         height: 171px;
                         margin-top: -11px;
                         @include shadow( '',0);
-                        position: relative; 
+                        position: relative;
                     }
                 }
 
@@ -160,6 +160,19 @@ body {
 
                 .followers {
                     float: right;
+                    margin-top: 18px;
+                    color:#a6b0b7;
+                    span{
+                      color:#3f454a;
+                      margin-right:3px;
+                    }
+                    i{
+                      font-size:24px;
+                      color:#a6b0b7;
+                      display: inline-block;
+                      float:left;
+                      margin:-5px 16px 0 0;
+                    }
                 }
             }
         }
