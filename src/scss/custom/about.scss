@@ -4,6 +4,8 @@ body{
     width: 1169px;
     .about{
       .header{
+        @include shadow('',0px);
+        @include border-radius(5px);
         padding:22px;
         background: #FFF;
         margin-top:71px;
