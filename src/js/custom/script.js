@@ -108,10 +108,11 @@ jQuery(document).ready(function($) {
                 profileObj.html(''); //clear contents of profileObj
                 $.each(profileInfo, function(index, value) {
                     var tempObj = profileCntObj;
-                    profileObj.append('<li>' + tempObj.html() + '</li>');
-
+                    
                     tempObj.find('span').html(value['value']); //Adding the content Title
                     tempObj.find('i').not('a i').addClass(value['icon']); //setting the icon
+
+                    profileObj.append('<li>' + tempObj.html() + '</li>');
 
                 });
             }
