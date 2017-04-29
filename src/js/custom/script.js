@@ -137,11 +137,19 @@ jQuery(document).ready(function($) {
                     var xLeft = thisOffset.left;
                     tooltip.css('top', xTop - 10);
                     tooltip.css('left', xLeft + 'px');
+
+                    populateTooltip(clickedIndex);
                 });
             }
             mainBody.on('click',function(){
               tooltip.removeClass('show');
             });
+        }
+        function populateTooltip(cIndex){
+          var tooltip = $('.tooltip');
+          console.log(profileInfo[cIndex]);
+          tooltip.find('label').html(profileInfo[cIndex]['type']);
+          tooltip.find('input').val(profileInfo[cIndex]['value']);
         }
         //first initialization
         reloadFunc();
