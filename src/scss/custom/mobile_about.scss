@@ -44,12 +44,10 @@
         position: relative;
         label{
           position: absolute;
-          top: -12px;
           left: 0;
+          top:10px;
           width: 100%;
-          color:#a6b0b7;
-          font-size:12px;
-          text-transform: uppercase;
+          font-size: 16px;
           font-weight: 200;
           //transition
           @include labelTransition();
@@ -60,14 +58,16 @@
           border-bottom: 1px solid #d0dce7;
           height: 36px;
           font-size: 16px;
+          display: block;
           &:focus,
           &:valid {
               outline: none;
 
-              & ~ label {
-                  top: 0px;
+              &~ label {
+                text-transform: uppercase;
+                  top: -12px;
                   font-size: 12px;
-                  color: #a6b0b7;
+                  color:#a6b0b7;
               }
           }
         }
