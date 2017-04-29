@@ -18,6 +18,7 @@
     }
 
     .profInfo {
+      margin:0 18px;
       margin-top:43px;
         .left {
             float: none;
@@ -34,7 +35,24 @@
           }
         }
         .right{
-          float:none;
+          text-align: left;
+          float:left;
+          width: 100%;
+          .stars{
+            float:none;
+            i{
+              color:#007ee5;
+            }
+          }
+          span{
+            word-spacing: 5px;
+            float:none;
+            display: block;
+          }
         }
+    }
+    .menu{
+      float:none;
+      display: block;
     }
 }
