@@ -68,36 +68,43 @@
 
     .menu {
         padding: 0;
+        position: relative;
         float: none;
         margin: 0;
         float: none;
         padding: 0 0 0 20px;
         margin-top: 66px;
         height: 56px;
-        overflow: hidden;
+        .ulWrap{
+          overflow: hidden;
+          width: 100%;
+          height: 60px;
+          ul {
+            overflow: scroll;
+              display: block;
+              white-space: nowrap;
+              overflow: auto;
+              float: none;
+              display: inline-block;
+              width: 100%;
+              height: 38px;
+              display: block;
+              margin: 0;
+              padding: 18px 0 18px 0;
+              white-space: nowrap;
+              padding-top: 18px;
 
-        ul {
-            display: block;
-            white-space: nowrap;
-            overflow: auto;
-            float: none;
-            display: inline-block;
-            width: 100%;
-            height: 38px;
-            display: block;
-            margin: 0;
-            padding: 18px 0 18px 0;
-            white-space: nowrap;
-            padding-top: 18px;
-
-            li {
-                float: none;
-                display: inline-block;
-                min-width: 1%;
-            }
+              li {
+                  float: none;
+                  display: inline-block;
+                  min-width: 1%;
+              }
+          }
         }
 
+
         .followers {
+          display: block;
             position: absolute;
             left: 20px;
             top: -61px;
