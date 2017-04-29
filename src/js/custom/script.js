@@ -84,6 +84,7 @@ jQuery(document).ready(function($) {
                                     ulMenu.find('.about a').addClass('selected');
                                     // generate the data for the profile
                                     generateProfile();
+                                    mobileFunc();
                                     break;
                                 case '#settings':
                                     ulMenu.find('li.settings a').addClass('selected');
@@ -172,6 +173,9 @@ jQuery(document).ready(function($) {
             ttClickedInd = null;
             tooltip.removeClass('show');
 
+        }
+        function mobileFunc(){
+          
         }
         //first initialization
         reloadFunc();
