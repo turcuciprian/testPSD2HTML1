@@ -20,23 +20,26 @@
     .profInfo {
       margin:0 18px;
       margin-top:43px;
+      float:none;
         .left {
+          margin:0px;
+          padding:0px;
             float: none;
             width: 100%;
-            img {
-                &.profilePicture {
-                }
-            }
-        }
         .center{
+          margin:0px;
+          padding:0px;
           float:none;
           h4{
             text-align: center;
           }
         }
         .right{
+          margin:0px;
+          padding:0px;
+          float:none;
           text-align: left;
-          float:left;
+          max-width: 100%;
           width: 100%;
           .stars{
             float:none;
@@ -52,7 +55,21 @@
         }
     }
     .menu{
+      padding: 0;
+      position: relative;
+      float:none;
+      margin:0;
       float:none;
       display: block;
+      margin-top: 66px;
+      ul{
+        margin:0px;
+        padding:0px;
+      }
+      .followers{
+        position: absolute;
+        left:20px;
+        top:-61px;
+      }
     }
 }
