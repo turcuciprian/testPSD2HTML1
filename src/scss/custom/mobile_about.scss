@@ -2,11 +2,22 @@
   .baseContent{
     h3{
       margin-top: 5px;
+      font-size: 20px;
+      a{
+        display: block;
+        float:right;
+        background: #ecf1f5;
+        padding:0px 7px;
+        i{
+          color:#727e88;
+        }
+      }
     }
     ul{
       li{
         margin:0px;
         padding:0px;
+        margin-bottom: 11px;
         background-color: inherit;
         a{
           display: none;
