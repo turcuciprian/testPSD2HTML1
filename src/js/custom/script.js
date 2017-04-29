@@ -192,11 +192,20 @@ jQuery(document).ready(function($) {
                         }
                         if(options[0]){
                           options.removeClass('hidden');
-                          
+
                         }
                         tThis.addClass('hidden');
                         hContainer.removeClass('hidden');
                     }
+
+                    //populate input fields with array data
+                    var inputs = $('#mProfEdit p input');
+
+                    inputs.forEach(function(item){
+                      var thisItem = $(item);
+                      item.val('asd');
+
+                    })
 
                 });
             }
