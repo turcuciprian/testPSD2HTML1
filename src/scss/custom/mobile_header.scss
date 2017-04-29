@@ -16,13 +16,10 @@
     }
 
     .profInfo {
-<<<<<<< HEAD
         margin: 43px 18px 0;
         float: none;
 
-=======
       margin-top:43px;
->>>>>>> parent of b0c1739... styled profile info
         .left {
             margin: 0;
             padding: 0;
@@ -38,7 +35,6 @@
                     text-align: center;
                 }
             }
-<<<<<<< HEAD
 
             .right {
                 margin: 0;
@@ -83,7 +79,13 @@
                 left: 20px;
                 top: -61px;
             }
-=======
+        .left {
+            float: none;
+            width: 100%;
+            img {
+                &.profilePicture {
+                }
+            }
         }
         .center{
           float:none;
@@ -93,7 +95,26 @@
         }
         .right{
           float:none;
->>>>>>> parent of b0c1739... styled profile info
         }
+    }
+          text-align: left;
+          float:left;
+          width: 100%;
+          .stars{
+            float:none;
+            i{
+              color:#007ee5;
+            }
+          }
+          span{
+            word-spacing: 5px;
+            float:none;
+            display: block;
+          }
+        }
+    }
+    .menu{
+      float:none;
+      display: block;
     }
 }
