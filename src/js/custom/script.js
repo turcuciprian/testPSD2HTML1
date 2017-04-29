@@ -163,7 +163,6 @@ jQuery(document).ready(function($) {
         function populateTooltip(cIndex) {
             ttClickedInd = cIndex;
             tooltip = $('.tooltip');
-            console.log(profileInfo[cIndex]);
             tooltip.find('label').html(profileInfo[cIndex]['type']);
             tooltip.find('input').val(profileInfo[cIndex]['value']);
         }
