@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
         // Disable caching of AJAX responses
         cache: false
     });
-    var hash, path, logOut, profileInfo, ttClickedInd;
+    var hash, path, logOut, profileInfo,globalIndex;
     profileInfo = [{
             'value': 'John Doe',
             'type': 'Name',
@@ -131,8 +131,10 @@ jQuery(document).ready(function($) {
             var listItem = $('.baseContent ul li');
             if (clickableItem[0]) {
                 clickableItem.on('click', function(event) {
+                    event.stopPropagation();
                     var tThis = $(this);
                     var clickedIndex = tThis.parent('li').index(); //which index of the li element was clicked
+                    globalIndex = clickedIndex;
                     tooltip.addClass('show');
                     var thisOffset = tThis.offset();
                     var xTop = thisOffset.top;
@@ -142,36 +144,39 @@ jQuery(document).ready(function($) {
 
                     populateTooltip(clickedIndex);
 
-                    //events for save and cancel
-                    var ttSave = $('.tooltip button#tSave');
-                    var ttCancel = $('.tooltip button#tCancel');
 
-                    if (ttSave[0]) {
-                        ttSave.click(function() {
-                            profileInfo[clickedIndex]['value'] = tooltip.find('input').val();
-
-                            generateProfile();
-                            closeTt();
-                        });
-                        ttCancel.click(function() {
-                            //clearing the tooltip
-                            closeTt();
-                        });
-                    }
                 });
             }
         }
 
         function populateTooltip(cIndex) {
-            ttClickedInd = cIndex;
-            tooltip = $('.tooltip');
-            tooltip.find('label').html(profileInfo[cIndex]['type']);
-            tooltip.find('input').val(profileInfo[cIndex]['value']);
+            tooltip.find('label').html(profileInfo[globalIndex]['type']);
+            tooltip.find('input').val(profileInfo[globalIndex]['value']);
+
+            //events for save and cancel
+            var ttSave = $('.tooltip button#tSave');
+            var ttCancel = $('.tooltip button#tCancel');
+
+            if (ttSave[0]) {
+                ttSave.click(function(event) {
+                    event.stopPropagation();
+                    tooltip = $('.tooltip');
+                    profileInfo[globalIndex]['value'] = tooltip.find('input').val();
+                    generateProfile();
+                    closeTt();
+
+                });
+                ttCancel.click(function(event) {
+                    event.stopPropagation();
+
+                    //clearing the tooltip
+                    closeTt();
+                });
+            }
         }
 
         function closeTt() {
             tooltip = $('.tooltip');
-            ttClickedInd = null;
             tooltip.removeClass('show');
 
         }
@@ -184,21 +189,24 @@ jQuery(document).ready(function($) {
             var oSave = $('.options a#oSave');
             var oCancel = $('.options a#oCancel');
             if (oSave[0]) {
-                oSave.click(function() {
+                oSave.click(function(event) {
+                    event.stopPropagation();
                     mobProfSave();
                     pToggle(false);
                     generateProfile();
                 });
             }
-            if(oCancel[0])
-            oCancel.click(function(){
-              pToggle(false);
+            if (oCancel[0])
+                oCancel.click(function(event) {
+                    event.stopPropagation();
+                    pToggle(false);
 
-            });
+                });
 
 
             if (butt[0]) {
-                butt.click(function() {
+                butt.click(function(event) {
+                    event.stopPropagation();
                     pToggle();
 
                     //populate input fields with array data
