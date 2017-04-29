@@ -186,8 +186,15 @@ jQuery(document).ready(function($) {
             if (oSave[0]) {
                 oSave.click(function() {
                     mobProfSave();
+                    pToggle(false);
+                    generateProfile();
                 });
             }
+            if(oCancel[0])
+            oCancel.click(function(){
+              pToggle(false);
+
+            });
 
 
             if (butt[0]) {
@@ -199,27 +206,27 @@ jQuery(document).ready(function($) {
 
                     $.each(inputs, function(index, item) {
                         var thisItem = $(item);
+                        console.log(index);
+                        if (profileInfo[index]) {
+                            var tempVal = profileInfo[index]['value'];
+                            switch (index) {
+                                case 0:
+                                    tempVal = profileInfo[index]['value'].split(" ")[0];
+                                    break;
+                                case 1:
+                                    index--;
+                                    tempVal = profileInfo[index]['value'].split(" ")[1];
+                                    break;
+                                default:
+                                    index--;
+                                    tempVal = profileInfo[index]['value'];
 
+                                    break;
 
-                        var tempVal = profileInfo[index]['value'];
-                        switch (index) {
-                            case 0:
-                                tempVal = profileInfo[index]['value'].split(" ")[0];
-                                break;
-                            case 1:
-                                index--;
-                                tempVal = profileInfo[index]['value'].split(" ")[1];
-                                break;
-                            default:
-                                index--;
-                                tempVal = profileInfo[index]['value'];
-
-                                break;
-
+                            }
+                            thisItem.val(tempVal);
                         }
 
-
-                        thisItem.val(tempVal);
 
                     })
 
@@ -245,21 +252,40 @@ jQuery(document).ready(function($) {
             }
         }
 
-        function pToggle(tShow) {
-          var tThis = $('.baseContent h3 a');
-          var hContainer = $('#mProfEdit');
-          var pUL = $('.baseContent ul');
-            tShow = (typeof tShow !== 'undefined') ?  tShow : true; //default variable
+        function pToggle(show) {
+            var tThis = $('.baseContent h3 a');
+            var hContainer = $('#mProfEdit');
+            var pUL = $('.baseContent ul');
+            options = $('.baseContent h3 .options');
+
+            show = (typeof show !== 'undefined') ? show : true; //default variable
 
             if (hContainer[0]) {
                 if (pUL[0]) {
-                    pUL.addClass('hidden');
+                    if (show) {
+                        pUL.addClass('hidden');
+                    } else {
+                        pUL.removeClass('hidden');
+                    }
                 }
                 if (options[0]) {
-                    options.removeClass('hidden');
+                    if (show) {
+                        options.removeClass('hidden');
+                    } else {
+                        options.addClass('hidden');
+                    }
                 }
-                tThis.addClass('hidden');
-                hContainer.removeClass('hidden');
+                if (show) {
+                    tThis.not('.options a').addClass('hidden');
+                } else {
+                    tThis.not('.options a').removeClass('hidden');
+                }
+                if (show) {
+                    hContainer.removeClass('hidden');
+                } else {
+                    hContainer.addClass('hidden');
+
+                }
             }
         }
         //first initialization
