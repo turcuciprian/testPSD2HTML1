@@ -30,7 +30,11 @@
         .container {
             @import 'mobile_header';
 
-            .baseContent {}
+            .baseContent {
+              width: 86%;
+              padding:7%;
+              overflow: hidden;
+            }
             @import 'mobile_about';
             @import 'mobile_settings';
         }

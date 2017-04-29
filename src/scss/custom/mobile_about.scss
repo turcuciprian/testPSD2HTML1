@@ -1,3 +1,22 @@
 .about{
-  
+  .baseContent{
+    h3{
+      margin-top: 5px;
+    }
+    ul{
+      li{
+        margin:0px;
+        padding:0px;
+        background-color: inherit;
+        a{
+          display: none;
+        }
+        &:nth-child(1){
+          i{
+            display: none
+          }
+        }
+      }
+    }
+  }
 }
