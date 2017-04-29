@@ -26,9 +26,17 @@
         }
         .container {
           .header{
+            .logInOut{
+              a{
+                &.logOut{
+                  border:0px solid red;
+                  text-decoration: none;
+                }
+              }
+            }
           }
           .baseContent{
-            
+
           }
             @import 'mobile_about';
             @import 'mobile_settings';
