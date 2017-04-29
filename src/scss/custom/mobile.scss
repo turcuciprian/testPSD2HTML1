@@ -26,19 +26,7 @@
         }
 
         .container {
-            .header {
-                padding: 0;
-                margin: 0;
-
-                .logInOut {
-                    a {
-                        &.logOut {
-                            border: 0 solid red;
-                            text-decoration: none;
-                        }
-                    }
-                }
-            }
+            @import 'mobile_header';
 
             .baseContent {}
             @import 'mobile_about';
