@@ -52,11 +52,13 @@ body {
                             margin-left: 24px;
                             background: #ecf1f5;
                             padding: 16px 11px 11px;
-                            &:hover{
-                              background: #007ee5;
-                              i{
-                                color:#FFF;
-                              }
+
+                            &:hover {
+                                background: #007ee5;
+
+                                i {
+                                    color: #FFF;
+                                }
                             }
 
                             i {
@@ -77,12 +79,13 @@ body {
         }
 
         .tooltip {
+            padding: 20px;
             display: none;
             position: absolute;
             @include shadow( '',0px,12px);
             background-color: #FFF;
-            width: 298px;
-            height: 142px;
+            width: 258px;
+            height: 102px;
 
             &.show {
                 display: block;
@@ -97,6 +100,42 @@ body {
                 border-width: 15px;
                 border-style: solid;
                 border-color: transparent #fff transparent transparent;
+            }
+
+            p {
+                text-align: left;
+                margin: 0;
+
+                label {
+                    color: #a6b0b7;
+                    text-transform: uppercase;
+                    font-weight: 200;
+                    font-size: 12px;
+                }
+
+                input {
+                    height: 30px;
+                    border: 0 solid red;
+                    border-bottom: 1px solid #d0dce7;
+                    font-size: 14px;
+
+                    &:focus,
+                    &:valid {
+                        outline: none;
+                    }
+                }
+
+                button {
+                    background-color: #007ee5;
+                    padding: 11px 34px;
+                    border: 0 solid red;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    color: #FFF;
+                    font-weight: bold;
+                    margin-top: 13px;
+                    @include border-radius(3px);
+                }
             }
         }
     }
