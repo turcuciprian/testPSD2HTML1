@@ -33,6 +33,7 @@ jQuery(document).ready(function($) {
         'login': 'templates/login.html'
     }
     // obj vars
+    var tooltip = $('.tooltip');
     var mainContainer = $('.container');
     var globalHeader = $('.header');
     var mainBody = $('body');
@@ -122,7 +123,7 @@ jQuery(document).ready(function($) {
         }
 
         function tooltipFunc() {
-            var tooltip = $('.tooltip');
+            tooltip = $('.tooltip');
             //tooltip appear for when item is clicked
             var clickableItem = $('.baseContent ul li a');
             var listItem = $('.baseContent ul li');
@@ -145,10 +146,8 @@ jQuery(document).ready(function($) {
 
                     if (ttSave[0]) {
                         ttSave.click(function() {
-                            if (profileInfo[ttClickedInd]['value']) {
-                                profileInfo[ttClickedInd]['value'] = tooltip.find('input').val();
+                            profileInfo[clickedIndex]['value'] = tooltip.find('input').val();
 
-                            }
                             generateProfile();
                             closeTt();
                         });
@@ -163,14 +162,14 @@ jQuery(document).ready(function($) {
 
         function populateTooltip(cIndex) {
             ttClickedInd = cIndex;
-            var tooltip = $('.tooltip');
+            tooltip = $('.tooltip');
             console.log(profileInfo[cIndex]);
             tooltip.find('label').html(profileInfo[cIndex]['type']);
             tooltip.find('input').val(profileInfo[cIndex]['value']);
         }
 
         function closeTt() {
-            var tooltip = $('.tooltip');
+            tooltip = $('.tooltip');
             ttClickedInd = null;
             tooltip.removeClass('show');
 
