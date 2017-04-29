@@ -2,24 +2,31 @@
 /* Portrait */
 @media only screen and (max-device-width: 414px) and (orientation: portrait) {
     body {
-      background:none;
+        background: none;
+
         &.login {
-          display: block;
-          min-height: 0px;
-          background-image: none;
+            display: block;
+            min-height: 0;
+            background-image: none;
+
             .container {
-              width: 86%;
-              margin:auto;
-              @import 'mobile_login';
-                a{
-                  &#loginBtn{
-                    position:absolute;
-                    bottom:0px;
-                    left:0px;
-                    width:100%;
-                  }
+                width: 86%;
+                margin: auto;
+                @import 'mobile_login';
+
+                a {
+                    &#loginBtn {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                    }
                 }
             }
+        }
+        .container {
+            @import 'mobile_about';
+            @import 'mobile_settings';
         }
     }
 }
