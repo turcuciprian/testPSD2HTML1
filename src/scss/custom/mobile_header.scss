@@ -1,14 +1,12 @@
 .header {
     padding: 0;
     margin: 0;
-    margin-top:22px;
 
     .logInOut {
         a {
             &.logOut {
                 border: 0 solid red;
                 text-decoration: none;
-                margin-right: 10px;
             }
         }
     }
@@ -18,58 +16,68 @@
     }
 
     .profInfo {
-      margin:0 18px;
-      margin-top:43px;
-      float:none;
+        margin: 43px 18px 0;
+        float: none;
+
         .left {
-          margin:0px;
-          padding:0px;
+            margin: 0;
+            padding: 0;
             float: none;
             width: 100%;
-        .center{
-          margin:0px;
-          padding:0px;
-          float:none;
-          h4{
-            text-align: center;
-          }
-        }
-        .right{
-          margin:0px;
-          padding:0px;
-          float:none;
-          text-align: left;
-          max-width: 100%;
-          width: 100%;
-          .stars{
-            float:none;
-            i{
-              color:#007ee5;
+
+            .center {
+                margin: 0;
+                padding: 0;
+                float: none;
+
+                h4 {
+                    text-align: center;
+                }
             }
-          }
-          span{
-            word-spacing: 5px;
-            float:none;
-            display: block;
-          }
+
+            .right {
+                margin: 0;
+                padding: 0;
+                float: none;
+                text-align: left;
+                max-width: 100%;
+                width: 100%;
+
+                .stars {
+                    float: none;
+
+                    i {
+                        color: #007ee5;
+                    }
+                }
+
+                span {
+                    word-spacing: 5px;
+                    float: none;
+                    display: block;
+                }
+            }
         }
-    }
-    .menu{
-      padding: 0;
-      position: relative;
-      float:none;
-      margin:0;
-      float:none;
-      display: block;
-      margin-top: 66px;
-      ul{
-        margin:0px;
-        padding:0px;
-      }
-      .followers{
-        position: absolute;
-        left:20px;
-        top:-61px;
-      }
+
+        .menu {
+            padding: 0;
+            position: relative;
+            float: none;
+            margin: 0;
+            float: none;
+            display: block;
+            margin-top: 66px;
+
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            .followers {
+                position: absolute;
+                left: 20px;
+                top: -61px;
+            }
+        }
     }
 }
