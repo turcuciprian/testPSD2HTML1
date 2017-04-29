@@ -125,16 +125,18 @@ jQuery(document).ready(function($) {
           var tooltip = $('.tooltip');
             //tooltip appear for when item is clicked
             var clickableItem = $('.baseContent ul li a');
+            var listItem = $('.baseContent ul li');
             if (clickableItem[0]) {
                 clickableItem.on('click', function(event) {
+                  var tThis = $(this);
+                  var clickedIndex = tThis.parent('li').index(); //which index of the li element was clicked
                   event.stopPropagation();
                   tooltip.addClass('show');
-                    var thisOffset = $(this).offset();
+                    var thisOffset = tThis.offset();
                     var xTop = thisOffset.top;
                     var xLeft = thisOffset.left;
                     tooltip.css('top', xTop - 10);
                     tooltip.css('left', xLeft + 'px');
-
                 });
             }
             mainBody.on('click',function(){
