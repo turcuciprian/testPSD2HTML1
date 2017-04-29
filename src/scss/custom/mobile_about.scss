@@ -39,5 +39,28 @@
         }
       }
     }
+    #mProfEdit{
+      p{
+        label{
+          width: 100%;
+          color:#a6b0b7;
+          font-size:12px;
+          text-transform: uppercase;
+          font-weight: 200;
+        }
+        input{
+          width: 100%;
+          border:0px solid red;
+          border-bottom: 1px solid #d0dce7;
+          height: 36px;
+          font-size: 16px;
+          &:focus,
+          &:valid {
+              outline: none;
+            }
+        }
+
+      }
+    }
   }
 }
