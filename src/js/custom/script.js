@@ -37,6 +37,7 @@ jQuery(document).ready(function($) {
     var mainContainer = $('.container');
     var globalHeader = $('.header');
     var mainBody = $('body');
+    var options = $('.baseContent h3 .options');
 
 
     if (mainContainer[0]) {
@@ -177,26 +178,21 @@ jQuery(document).ready(function($) {
 
         function mobileFunc() {
             var butt = $('#mProfEditButt');
-            var hContainer = $('#mProfEdit');
-            var pUL = $('.baseContent ul');
             var pai = $('.baseContent h3 a'); //profile link i
-            var options = $('.baseContent h3 .options'); //save/cancel links
+            options = $('.baseContent h3 .options');
+            //options objs
+            var oSave = $('.options a#oSave');
+            var oCancel = $('.options a#oCancel');
+            if (oSave[0]) {
+                oSave.click(function() {
+                    mobProfSave();
+                });
+            }
 
 
             if (butt[0]) {
                 butt.click(function() {
-                    var tThis = $(this);
-                    if (hContainer[0]) {
-                        if (pUL[0]) {
-                            pUL.addClass('hidden');
-                        }
-                        if (options[0]) {
-                            options.removeClass('hidden');
-
-                        }
-                        tThis.addClass('hidden');
-                        hContainer.removeClass('hidden');
-                    }
+                    pToggle();
 
                     //populate input fields with array data
                     var inputs = $('#mProfEdit p input');
@@ -230,6 +226,41 @@ jQuery(document).ready(function($) {
                 });
             }
 
+        }
+
+        function mobProfSave() {
+            var firstName = $('#pFirstName');
+            var lastName = $('#pLastName');
+            var website = $('#pWebsite');
+            var phone = $('#pPhone');
+            var location = $('#pLocation');
+
+            profileInfo[0]['value'] = firstName.val() + ' ' + lastName.val();
+            profileInfo[1]['value'] = website.val();
+            profileInfo[2]['value'] = phone.val();
+            profileInfo[3]['value'] = location.val();
+
+            if (options[0]) {
+                options.addClass('hidden');
+            }
+        }
+
+        function pToggle(tShow) {
+          var tThis = $('.baseContent h3 a');
+          var hContainer = $('#mProfEdit');
+          var pUL = $('.baseContent ul');
+            tShow = (typeof tShow !== 'undefined') ?  tShow : true; //default variable
+
+            if (hContainer[0]) {
+                if (pUL[0]) {
+                    pUL.addClass('hidden');
+                }
+                if (options[0]) {
+                    options.removeClass('hidden');
+                }
+                tThis.addClass('hidden');
+                hContainer.removeClass('hidden');
+            }
         }
         //first initialization
         reloadFunc();
