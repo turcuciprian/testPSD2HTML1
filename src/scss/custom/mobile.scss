@@ -2,6 +2,8 @@
 /* Portrait */
 @media only screen and (max-device-width: 414px) and (orientation: portrait) {
     body {
+      margin:0px;
+      padding:0;
         background: none;
 
         &.login {
