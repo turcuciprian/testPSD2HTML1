@@ -24,20 +24,23 @@
                 }
             }
         }
-        .container {
-          .header{
-            .logInOut{
-              a{
-                &.logOut{
-                  border:0px solid red;
-                  text-decoration: none;
-                }
-              }
-            }
-          }
-          .baseContent{
 
-          }
+        .container {
+            .header {
+                padding: 0;
+                margin: 0;
+
+                .logInOut {
+                    a {
+                        &.logOut {
+                            border: 0 solid red;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .baseContent {}
             @import 'mobile_about';
             @import 'mobile_settings';
         }
