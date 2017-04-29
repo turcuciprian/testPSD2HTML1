@@ -130,7 +130,6 @@ jQuery(document).ready(function($) {
                 clickableItem.on('click', function(event) {
                     var tThis = $(this);
                     var clickedIndex = tThis.parent('li').index(); //which index of the li element was clicked
-                    event.stopPropagation();
                     tooltip.addClass('show');
                     var thisOffset = tThis.offset();
                     var xTop = thisOffset.top;
@@ -139,11 +138,23 @@ jQuery(document).ready(function($) {
                     tooltip.css('left', xLeft + 'px');
 
                     populateTooltip(clickedIndex);
+
+                    //events for save and cancel
+                    var ttSave = $('.tooltip button#tSave');
+                    var ttCancel = $('.tooltip button#tCancel');
+
+                    if(ttSave[0]){
+                      ttSave.click(function(){
+
+                      });
+                      ttCancel.click(function(){
+                        //clearing the tooltip
+                        ttClickedInd = null;
+                        tooltip.removeClass('show');
+                      });
+                    }
                 });
             }
-            mainBody.on('click', function() {
-                tooltip.removeClass('show');
-            });
         }
 
         function populateTooltip(cIndex) {
