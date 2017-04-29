@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
         // Disable caching of AJAX responses
         cache: false
     });
-    var hash, path, logOut, profileInfo;
+    var hash, path, logOut, profileInfo, ttClickedInd;
     profileInfo = [{
             'value': 'John Doe',
             'type': 'Name',
@@ -122,16 +122,16 @@ jQuery(document).ready(function($) {
         }
 
         function tooltipFunc() {
-          var tooltip = $('.tooltip');
+            var tooltip = $('.tooltip');
             //tooltip appear for when item is clicked
             var clickableItem = $('.baseContent ul li a');
             var listItem = $('.baseContent ul li');
             if (clickableItem[0]) {
                 clickableItem.on('click', function(event) {
-                  var tThis = $(this);
-                  var clickedIndex = tThis.parent('li').index(); //which index of the li element was clicked
-                  event.stopPropagation();
-                  tooltip.addClass('show');
+                    var tThis = $(this);
+                    var clickedIndex = tThis.parent('li').index(); //which index of the li element was clicked
+                    event.stopPropagation();
+                    tooltip.addClass('show');
                     var thisOffset = tThis.offset();
                     var xTop = thisOffset.top;
                     var xLeft = thisOffset.left;
@@ -141,15 +141,17 @@ jQuery(document).ready(function($) {
                     populateTooltip(clickedIndex);
                 });
             }
-            mainBody.on('click',function(){
-              tooltip.removeClass('show');
+            mainBody.on('click', function() {
+                tooltip.removeClass('show');
             });
         }
-        function populateTooltip(cIndex){
-          var tooltip = $('.tooltip');
-          console.log(profileInfo[cIndex]);
-          tooltip.find('label').html(profileInfo[cIndex]['type']);
-          tooltip.find('input').val(profileInfo[cIndex]['value']);
+
+        function populateTooltip(cIndex) {
+            ttClickedInd = cIndex;
+            var tooltip = $('.tooltip');
+            console.log(profileInfo[cIndex]);
+            tooltip.find('label').html(profileInfo[cIndex]['type']);
+            tooltip.find('input').val(profileInfo[cIndex]['value']);
         }
         //first initialization
         reloadFunc();
