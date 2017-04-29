@@ -180,14 +180,19 @@ jQuery(document).ready(function($) {
             var hContainer = $('#mProfEdit');
             var pUL = $('.baseContent ul');
             var pai = $('.baseContent h3 a'); //profile link i
+            var options = $('.baseContent h3 .options'); //save/cancel links
 
 
             if (butt[0]) {
                 butt.click(function() {
-                    tThis = $(this);
+                    var tThis = $(this);
                     if (hContainer[0]) {
                         if (pUL[0]) {
                             pUL.addClass('hidden');
+                        }
+                        if(options[0]){
+                          options.removeClass('hidden');
+                          
                         }
                         tThis.addClass('hidden');
                         hContainer.removeClass('hidden');
