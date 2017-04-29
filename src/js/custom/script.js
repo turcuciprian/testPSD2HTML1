@@ -174,8 +174,28 @@ jQuery(document).ready(function($) {
             tooltip.removeClass('show');
 
         }
-        function mobileFunc(){
-          
+
+        function mobileFunc() {
+            var butt = $('#mProfEditButt');
+            var hContainer = $('#mProfEdit');
+            var pUL = $('.baseContent ul');
+            var pai = $('.baseContent h3 a'); //profile link i
+
+
+            if (butt[0]) {
+                butt.click(function() {
+                    tThis = $(this);
+                    if (hContainer[0]) {
+                        if (pUL[0]) {
+                            pUL.addClass('hidden');
+                        }
+                        tThis.addClass('hidden');
+                        hContainer.removeClass('hidden');
+                    }
+
+                });
+            }
+
         }
         //first initialization
         reloadFunc();
