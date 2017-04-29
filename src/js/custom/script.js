@@ -143,15 +143,19 @@ jQuery(document).ready(function($) {
                     var ttSave = $('.tooltip button#tSave');
                     var ttCancel = $('.tooltip button#tCancel');
 
-                    if(ttSave[0]){
-                      ttSave.click(function(){
+                    if (ttSave[0]) {
+                        ttSave.click(function() {
+                            if (profileInfo[ttClickedInd]['value']) {
+                                profileInfo[ttClickedInd]['value'] = tooltip.find('input').val();
 
-                      });
-                      ttCancel.click(function(){
-                        //clearing the tooltip
-                        ttClickedInd = null;
-                        tooltip.removeClass('show');
-                      });
+                            }
+                            generateProfile();
+                            closeTt();
+                        });
+                        ttCancel.click(function() {
+                            //clearing the tooltip
+                            closeTt();
+                        });
                     }
                 });
             }
@@ -163,6 +167,13 @@ jQuery(document).ready(function($) {
             console.log(profileInfo[cIndex]);
             tooltip.find('label').html(profileInfo[cIndex]['type']);
             tooltip.find('input').val(profileInfo[cIndex]['value']);
+        }
+
+        function closeTt() {
+            var tooltip = $('.tooltip');
+            ttClickedInd = null;
+            tooltip.removeClass('show');
+
         }
         //first initialization
         reloadFunc();
