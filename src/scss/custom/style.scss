@@ -21,9 +21,10 @@ body {
 
             .logInOut {
                 text-align: right;
-
+                margin-top:21px;
                 a {
                     &.logOut {
+                      display: inline-block;
                         background: #FFF;
                         border: 1px solid #007ee5;
                         @include border-radius(3px);
@@ -32,6 +33,7 @@ body {
                         font-weight: bold;
                         padding: 10px 20px;
                         font-size: 12px;
+                        margin:0px 9px 0 0;
                     }
                 }
             }

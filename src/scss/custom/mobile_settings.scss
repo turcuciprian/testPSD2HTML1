@@ -1,0 +1,18 @@
+.settings {
+    .baseContent {
+        h3 {
+            .options {
+                float: right;
+
+                a {
+                    display: inline-block;
+                    background: none;
+                    color: #007ee5;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

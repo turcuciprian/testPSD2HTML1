@@ -206,7 +206,6 @@ jQuery(document).ready(function($) {
 
                     $.each(inputs, function(index, item) {
                         var thisItem = $(item);
-                        console.log(index);
                         if (profileInfo[index]) {
                             var tempVal = profileInfo[index]['value'];
                             switch (index) {
