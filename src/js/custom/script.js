@@ -201,9 +201,29 @@ jQuery(document).ready(function($) {
                     //populate input fields with array data
                     var inputs = $('#mProfEdit p input');
 
-                    inputs.forEach(function(item){
+                    $.each(inputs,function(index,item){
                       var thisItem = $(item);
-                      item.val('asd');
+
+
+                      var tempVal = profileInfo[index]['value'];
+                      switch (index) {
+                        case 0:
+                        tempVal = profileInfo[index]['value'].split(" ")[0];
+                          break;
+                          case 1:
+                          index--;
+                          tempVal = profileInfo[index]['value'].split(" ")[1];
+                            break;
+                        default:
+                        index--;
+                        tempVal = profileInfo[index]['value'];
+
+                        break;
+
+                      }
+
+
+                      thisItem.val(tempVal);
 
                     })
 
